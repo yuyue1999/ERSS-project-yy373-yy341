@@ -136,7 +136,7 @@ void disConnectDB(pqxx::connection* C) {
   helper(const helper&) = delete;
   helper& operator=(const helper) = delete;
   private:
-  helper():hostnamea("vcm-32242.vm.duke.edu"),hostnamew("vcm-32242.vm.duke.edu"),portw("12345"),porta("5688"),dbname("postgres"),user("postgres"),password("passw0rd"){
+  helper():hostnamea("vcm-27827.vm.duke.edu"),hostnamew("vcm-27827.vm.duke.edu"),portw("12345"),porta("5688"),dbname("postgres"),user("postgres"),password("passw0rd"){
     POOL=pool.get_pool();
     Socket S;
     socket_fd=S.BuildSocket();
