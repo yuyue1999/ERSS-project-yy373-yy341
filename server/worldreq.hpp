@@ -45,6 +45,7 @@ void handleDelivery(UDeliveryMade handle){
     if (sendMesgTo<UACommands>(commands, tempoutput.get()) == false) {
       std::cout<< "Cannot receive AU_commands from Amazon.";
     }
+    std::cout<<"Waiting for ack from amazon: "<<sequence<<std::endl;
     sleep(3);
   }
 }
@@ -82,6 +83,7 @@ void dealUFinished(UFinished handle){
     if (sendMesgTo<UACommands>(commands, tempoutput.get()) == false) {
     std::cout<< "Cannot receive AU_commands from Amazon.";
     }
+    std::cout<<"Waiting for ack from amazon: "<<sequence<<std::endl;
     sleep(3);
   }
 }

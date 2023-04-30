@@ -67,7 +67,7 @@ void pickup(AUInitPickUp temp){
         std::cout<< "Cannot receive AU_commands from Amazon.";
         }
         sleep(3);
-        std::cout<<"waiting for ack"<<sequence<<std::endl;
+        std::cout<<"waiting for ack from world"<<sequence<<std::endl;
     }
 }
 void parseloaded(AULoaded temp){//有点小逻辑问题，再改！！！一部小车可能去很多地方送货！！！！！
@@ -111,6 +111,6 @@ void parseloaded(AULoaded temp){//有点小逻辑问题，再改！！！一部�
         std::cout<< "Cannot receive AU_commands from Amazon.";
         }
         sleep(3);
-        std::cout<<"waiting for ack"<<sequence<<std::endl;
+        std::cout<<"waiting for ack from world"<<sequence<<std::endl;
     }
 }

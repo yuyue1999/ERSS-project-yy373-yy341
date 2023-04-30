@@ -153,6 +153,9 @@ void* handleamazon(void *info){
   std::vector<std::thread> threads;
   std::cout<<message.pickupreq_size()<<std::endl;
   std::cout<<message.loaded_size()<<std::endl;
+  for(int i=0;i<message.acks_size();i++){
+    std::cout<<"received ack from amazon:"<<message.acks(i)<<std::endl;
+  }
   //amazonreq AR(C,p->world_fd,p->amazon_fd,p->seq_num,p->store);
   UACommands commands;
   for(int i=0;i<message.acks_size();i++){
@@ -310,7 +313,6 @@ int main(){
     }catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
     }
-    
     try{
         pqxx::nontransaction N(*C);
         //std::string SQLreq="SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_name='trucks');";

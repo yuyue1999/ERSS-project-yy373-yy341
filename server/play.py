@@ -33,7 +33,7 @@ def send(email,username,packageid):
         server.sendmail(sender_email, recipient_email, msg.as_string())
 
 if __name__ == "__main__":
-    host = 'vcm-30639.vm.duke.edu'
+    host = 'vcm-27827.vm.duke.edu'
     port = 8866
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((host, port))
