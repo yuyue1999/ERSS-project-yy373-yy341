@@ -121,7 +121,7 @@ public:
       return instance;
   }
   pqxx::connection* connectDB() {
-    std::string sql="dbname=ups user=postgres password=passw0rd";
+    std::string sql="host=db port=5432 dbname=postgres user=postgres password=passw0rd";
     pqxx::connection* C =new pqxx::connection(sql);
     if (C->is_open()) {
         // cout << "Opened database successfully: " << C->dbname() << endl;
@@ -136,7 +136,7 @@ void disConnectDB(pqxx::connection* C) {
   helper(const helper&) = delete;
   helper& operator=(const helper) = delete;
   private:
-  helper():hostnamea("vcm-32242.vm.duke.edu"),hostnamew("vcm-32242.vm.duke.edu"),portw("12345"),porta("5688"),dbname("ups"),user("postgres"),password("passw0rd"){
+  helper():hostnamea("vcm-32242.vm.duke.edu"),hostnamew("vcm-32242.vm.duke.edu"),portw("12345"),porta("5688"),dbname("postgres"),user("postgres"),password("passw0rd"){
     POOL=pool.get_pool();
     Socket S;
     socket_fd=S.BuildSocket();

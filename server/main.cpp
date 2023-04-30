@@ -300,7 +300,7 @@ int main(){
     std::cout<<"tom1"<<std::endl;*/
     bool first=false;
     try{
-        std::string sql="dbname=ups user=postgres password=passw0rd";
+        std::string sql="host=db port=5432 dbname=postgres user=postgres password=passw0rd";
         C = new pqxx::connection(sql);
         if (C->is_open()) {
             std::cout << "Opened database successfully: " << C->dbname() << std::endl;
